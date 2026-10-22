@@ -1,0 +1,10 @@
+<!--
+  Add these permissions to your app's AndroidManifest.xml.
+  ACCESS_FINE_LOCATION is required because Android ties WiFi scan results
+  to location permission for privacy reasons -- without it, scanResults()
+  will return an empty list even if WiFi is on.
+-->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />

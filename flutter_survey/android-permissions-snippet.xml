@@ -1,0 +1,9 @@
+<!--
+  Add inside the <manifest> tag of android/app/src/main/AndroidManifest.xml
+  in your generated Flutter project. Same permissions as the native Android
+  version -- WiFi scan results are gated behind location permission.
+-->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.INTERNET" />

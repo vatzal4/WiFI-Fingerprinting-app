@@ -1,0 +1,40 @@
+name: wifi_survey
+description: Survey app for capturing WiFi fingerprints for indoor wayfinding.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Real WiFi access-point scanning (BSSID + RSSI). Android only --
+  # iOS blocks third-party apps from reading raw scan results, same
+  # restriction that applies everywhere else (browsers, PWAs, etc).
+  wifi_scan: ^0.4.1
+
+  # Requests ACCESS_FINE_LOCATION, which Android requires before it
+  # will return WiFi scan results.
+  permission_handler: ^11.3.1
+
+  # Talks to the Flask backend (backend/app.py).
+  http: ^1.2.2
+
+  # Renders the SVG floor plans so the surveyor can tap a point on them.
+  flutter_svg: ^2.0.10+1
+  mongo_dart: ^0.10.9
+  shared_preferences: ^2.5.6
+  device_info_plus: ^13.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/floorplans/
+    - assets/floorplans/sot/
+    - assets/floorplans/sos/
